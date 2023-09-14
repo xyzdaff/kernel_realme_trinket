@@ -58,10 +58,9 @@ fi
 
 # Upload kernel to Keep.sh & Telegram
 BOT_TOKEN="6462212902:AAFQ5PgZ3FEHbBkAEV6tlblPXV4OgHP8sNY"
-  curl --progress-bar -F chat_id="-1001942087920" -F document=@"$ZIPNAME" "https://api.telegram.org/bot$BOT_TOKEN/sendDocument"
-    echo -e "\nDone!"
+curl --progress-bar -F chat_id="-1001942087920" -F document=@"$ZIPNAME" "https://api.telegram.org/bot$BOT_TOKEN/sendDocument"
+echo -e "\nDone!"
   else
     echo -e "\nUploading the ZIP file to keep.sh..."
     curl --upload-file $ZIPNAME https://free.keep.sh
     echo -e "\nDone!"
-  fi
